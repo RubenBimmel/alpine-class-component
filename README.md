@@ -146,7 +146,7 @@ In a setup with re-usable data it can be usefull to pass props to a component. A
 ```
 
 ```ts
-import { AlpineComponent, Component } from '@rubenbimmel/alpine-class-component';
+import { AlpineComponent, Component, Prop } from '@rubenbimmel/alpine-class-component';
 
 @Component
 export default class Person extends AlpineComponent {
