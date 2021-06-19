@@ -16,7 +16,7 @@ npm install @rubenbimmel/alpine-class-component
 - [Getters](#Getters)
 - [Refs](#Refs)
 - [Watch](#Watch)
-- [Props](#Props)
+- [Props (experimental)](#Props)
 
 
 ## <a id="Components"></a> Components
@@ -136,11 +136,11 @@ export default class Dropdown extends AlpineComponent {
 }
 ```
 
-## <a id="Props"></a> Props
-In a setup with re-usable data it can be usefull to pass props to a component. Alpine has no way to do this at the moment. The Prop decorator offers a workaround using the data attributes:
+## <a id="Props"></a> Props (experimental)
+In a setup with re-usable data it can be usefull to pass props to a component. Alpine has no way to do this at the moment. The Prop decorator offers a workaround by using data attributes:
 
 ```html
-<div x-data="Person" data-first-name="John" data-last-name="Doe">
+<div x-data="person" data-first-name="'John'" data-last-name="'Doe'">
     <span x-text="name"></span>
 </div>
 ```
