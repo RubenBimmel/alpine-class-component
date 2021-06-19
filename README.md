@@ -8,15 +8,15 @@ npm install @rubenbimmel/alpine-class-component
 
 ## Usage
 
-- [`@Component`](#Component)
-- [`Init`](#Init)
-- [`Getters`](#Getters)
-- [`@Ref`](#Ref)
-- [`@Watch`](#Watch)
-- [`@Prop`](#Prop)
+- [Components](#Components)
+- [Init](#Init)
+- [Getters](#Getters)
+- [Refs](#Refs)
+- [Watch](#Watch)
+- [Props](#Props)
 
 
-## <a id="Component"></a> @Component
+## <a id="Components"></a> Components
 Write a component:
 
 ```ts
@@ -92,7 +92,7 @@ export default class Person extends AlpineComponent {
 }
 ```
 
-## <a id="Ref"></a> @Ref
+## <a id="Refs"></a> Refs
 Use the Ref decorator to declare refs:
 
 ```html
@@ -116,7 +116,7 @@ export default class Example extends AlpineComponent {
 }
 ```
 
-## <a id="Watch"></a> @Watch
+## <a id="Watch"></a> Watch
 Use the Watch decorator to register watchers:
 
 ```ts
@@ -133,7 +133,7 @@ export default class Dropdown extends AlpineComponent {
 }
 ```
 
-## <a id="Prop"></a> @Prop
+## <a id="Props"></a> Props
 In a setup with re-usable data it can be usefull to pass props to a component. Alpine has no way to do this at the moment. The Prop decorator offers a workaround using the data attributes:
 
 ```html
