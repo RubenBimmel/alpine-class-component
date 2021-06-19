@@ -1,15 +1,19 @@
 {
-  "name": "alpine-class-component",
+  "name": "@rubenbimmel/alpine-class-component",
   "version": "0.0.1",
   "description": "TypeScript decorators for Alpine components.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {},
+  "peerDependencies": {
+    "alpinejs": "^3.0.6"
+  },
   "devDependencies": {
     "typescript": "^4.3.4"
   },
   "scripts": {
     "build": "tsc -p ./",
-    "prepublish": "npm run build"
+    "preversion": "npm run build"
   },
   "repository": {
     "type": "git",
