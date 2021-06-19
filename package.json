@@ -20,7 +20,7 @@
     "url": "git+https://github.com/RubenBimmel/alpine-class-component.git"
   },
   "author": "RubenBimmel",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/RubenBimmel/alpine-class-component/issues"
   },
