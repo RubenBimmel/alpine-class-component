@@ -1,6 +1,6 @@
 # Alpine Class Component
 
-[![npm](https://img.shields.io/npm/v/@rubenbimmel/alpine-class-component.svg)](https://www.npmjs.com/package/@rubenbimmel/alpine-class-component)
+[![npm version](https://badge.fury.io/js/%40rubenbimmel%2Falpine-class-component.svg)](https://badge.fury.io/js/%40rubenbimmel%2Falpine-class-component)
 
 This package provides typescript support for [Alpine.js](https://github.com/alpinejs/alpine), and is inspired by [archtechx/alpine-typescript](https://github.com/archtechx/alpine-typescript) and [kaorun343/vue-property-decorator](https://github.com/kaorun343/vue-property-decorator).
 
