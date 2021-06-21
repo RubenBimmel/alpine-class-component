@@ -6,7 +6,7 @@ abstract class AlpineComponent {
     $el!: HTMLElement;
 
     /** Dispatch a custom browser event from the current element */
-    $dispatch!: (event: string, data?: object) => void;
+    $dispatch!: (event: string, data?: any) => void;
 
     /** Watch a piece of data and run the provided callback anytime it changes */
     $watch!: (property: string, callback: (value: any) => void) => void;
