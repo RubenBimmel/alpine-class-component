@@ -1,4 +1,4 @@
-import { AlpineComponent, Component, Ref } from '../../../src';
+import { AlpineComponent, Component, Ref } from '../../../dist';
 
 @Component
 export default class RemoveRef extends AlpineComponent {

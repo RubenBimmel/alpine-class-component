@@ -1,4 +1,4 @@
-import { AlpineComponent, Component, Watch } from '../../../src';
+import { AlpineComponent, Component } from '../../../dist';
 
 @Component
 export default class Dropdown extends AlpineComponent {
@@ -10,10 +10,5 @@ export default class Dropdown extends AlpineComponent {
 
     close() {
         this.show = false
-    }
-
-    @Watch('show')
-    onShowChange(value: boolean) {
-        console.log(`@Watch: show = ${value}`);
     }
 }

@@ -1,4 +1,4 @@
-import { AlpineComponent, Component } from '../../../src';
+import { AlpineComponent, Component } from '../../../dist';
 
 @Component
 export default class Person extends AlpineComponent {
