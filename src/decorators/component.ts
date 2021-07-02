@@ -2,7 +2,7 @@ import AlpineComponent from '../alpineComponent';
 
 export default function Component(component: new (...args: any[]) => AlpineComponent): any {
     return function (...args: any[]) {
-        let instance = new component(args);
+        let instance = new component(...args);
 
         // prototype props.
         const proto = component.prototype;
