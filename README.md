@@ -12,11 +12,11 @@ npm install @rubenbimmel/alpine-class-component
 ## Usage
 
 - [Components](#Components)
+- [Constructor](#Constructor)
 - [Init](#Init)
 - [Getters](#Getters)
 - [Refs](#Refs)
 - [Watch](#Watch)
-- [Props (experimental)](#Props)
 
 
 ## <a id="Components"></a> Components
@@ -63,6 +63,35 @@ Use it in a template:
 </div>
 ```
 
+## <a id="Constructor"></a> Constructor
+You can pass in additional parameters to the initial data object using a constructor:
+
+```ts
+import { AlpineComponent, Component } from '@rubenbimmel/alpine-class-component';
+
+@Component
+export default class Person extends AlpineComponent {
+  firstName: string;
+  lastName: string;
+  
+  constructor(firstName: string, lastName: string) {
+    super();
+
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  get name() {
+    return this.firstName + ' ' + this.lastName;
+  }
+}
+```
+
+```html
+<div x-data="person('John', 'Doe')">
+    <span x-text="name"></span>
+</div>
+```
 
 ## <a id="Init"></a> Init
 Init functions are automatically execute before the component is rendered:
@@ -133,34 +162,6 @@ export default class Dropdown extends AlpineComponent {
     onShowChange(value: boolean) {
       console.log(value);
     }
-}
-```
-
-## <a id="Props"></a> Props (experimental)
-In a setup with re-usable data it can be usefull to pass props to a component. Alpine has no way to do this at the moment. The Prop decorator offers a workaround by using data attributes:
-
-```html
-<div x-data="person" data-first-name="'John'" data-last-name="'Doe'">
-    <span x-text="name"></span>
-</div>
-```
-
-```ts
-import { AlpineComponent, Component, Prop } from '@rubenbimmel/alpine-class-component';
-
-@Component
-export default class Person extends AlpineComponent {
-  @Prop() firstName: string;
-  @Prop() lastName: string;
-  @Prop({ default: true }) useLastName: boolean;
-
-  get name() {
-    if (!this.useLastName) {
-      return this.firstName;
-    }
-    
-    return this.firstName + ' ' + this.lastName;
-  }
 }
 ```
 
