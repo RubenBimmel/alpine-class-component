@@ -4,6 +4,9 @@
   "description": "TypeScript decorators for Alpine components.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "dependencies": {},
   "peerDependencies": {
     "alpinejs": "^3.2.1"
@@ -22,7 +25,8 @@
     "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "build": "tsc -p ./",
+    "build": "npm run clean && tsc -p ./",
+    "clean": "npx rimraf dist",
     "example": "npm run build && webpack --config example/webpack.config.js",
     "preversion": "npm run build"
   },
