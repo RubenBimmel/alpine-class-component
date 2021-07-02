@@ -82,7 +82,7 @@ export default class Person extends AlpineComponent {
   }
 
   get name() {
-    return `${this.firstName} ${this.lastName};
+    return `${this.firstName} ${this.lastName}`;
   }
 }
 ```
