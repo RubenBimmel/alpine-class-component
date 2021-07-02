@@ -82,7 +82,7 @@ export default class Person extends AlpineComponent {
   }
 
   get name() {
-    return this.firstName + ' ' + this.lastName;
+    return `${this.firstName} ${this.lastName};
   }
 }
 ```
@@ -159,8 +159,8 @@ export default class Dropdown extends AlpineComponent {
     show = false;
     
     @Watch('show')
-    onShowChange(value: boolean) {
-      console.log(value);
+    onShowChange(value: boolean, oldValue: boolean) {
+      console.log(value, oldValue);
     }
 }
 ```
